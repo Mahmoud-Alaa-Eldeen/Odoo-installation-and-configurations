@@ -1,0 +1,50 @@
+install ubunut virtual machine
+
+create a folder on desktop for ex. called odootutorials
+
+open terminal
+
+type sudo -i
+
+apt-get update
+
+apt-get upgrade
+
+sudo apt-get install wget subversion git bzr bzrtools python-pip gdebi-core -y
+
+sudo apt-get install python-dateutil python-feedparser python-ldap python-libxslt1 python-lxml python-mako python-openid python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-reportlab python-simplejson python-tz python-vatnumber python-vobject python-webdav python-werkzeug python-xlwt python-yaml python-zsi python-docutils python-psutil python-mock python-unittest2 python-jinja2 python-pypdf python-decorator python-requests python-passlib python-pil python-gpgme python-launchpadlib build-essential python-all-dev python-setuptools python-imaging python-suds python-xlsxwriter python-wheel -y
+
+sudo pip install gdata psycogreen
+
+sudo -H pip install suds
+
+sudo apt-get install node-clean-css -y
+
+sudo apt-get install node-less -y
+
+sudo apt-get install python-gevent -y
+
+
+
+#create a system user
+adduser odoo10
+#enter password:
+67f4fHVHytkfhh6Fj54tfs
+#then enter details (optional)or hit enter for set defaults
+#give sudo access to this user to make adminstrative commands for odoo,like install libraries later
+usermod -aG sudo odoo10
+
+#install postgresql and create a db username like a system user
+# this user will run odoo and must not be super user privillaged on db
+sudo apt-get install postgresql postgresql-server-dev-* -y
+su - postgres
+createuser -d odoo10 
+
+#see new db role privilages:
+psql
+\du
+\q
+
+#open odootutorials directory on terminal
+#clone odoo in this directory
+git clone --depth 1 --branch 10.0 https://www.github.com/odoo/odoo .
