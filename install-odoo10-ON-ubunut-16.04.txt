@@ -29,7 +29,7 @@ sudo apt-get install python-gevent -y
 #create a system user
 adduser odoo10
 #enter password:
-67f4fHVHytkfhh6Fj54tfs
+password
 #then enter details (optional)or hit enter for set defaults
 #give sudo access to this user to make adminstrative commands for odoo,like install libraries later
 usermod -aG sudo odoo10
